@@ -1,1 +1,3 @@
 rootProject.name = 'AnvilCraft-Inventories'
+include 'FireHelper/FireHelperAPI'
+include 'AnvilCraft-ItemsAPI'
