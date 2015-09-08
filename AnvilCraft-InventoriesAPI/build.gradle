@@ -1,0 +1,40 @@
+apply plugin: 'java'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        name 'Spigot'
+        url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots'
+    }
+    maven {
+        name 'BungeeCord'
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test'
+        }
+    }
+}
+
+dependencies {
+    compile 'org.spigotmc:spigot-api:+'
+    compile project(':FireHelper/FireHelperAPI')
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.powermock:powermock-module-junit4:1.4.9'
+    testCompile 'org.powermock:powermock-api-mockito:1.4.9'
+}
