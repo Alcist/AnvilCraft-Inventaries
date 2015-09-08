@@ -1,4 +1,4 @@
-name: BasePlugin
-main: com.alcist.baseplugin.Plugin
+name: AnvilCraft-Inventories
+main: com.alcist.anvilcraft.inventories.Plugin
 version: 1
-depend: []
+depend: [FireHelper, AnvilCraft-Items]
